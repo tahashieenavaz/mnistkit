@@ -1,6 +1,7 @@
 import torchvision.transforms.v2 as transforms
 from torchvision.datasets import MNIST
 from torch.utils.data import DataLoader
+from mnistkit.transforms import basic_transform
 
 
 def mnist(
@@ -8,7 +9,7 @@ def mnist(
     test_batch_size: int = 256,
     train_shuffle: bool = True,
     test_shuffle: bool = False,
-    transforms=transforms.ToTensor(),
+    transforms=basic_transform,
     root: str = ".",
 ):
     train_dataloader = DataLoader(
