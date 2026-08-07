@@ -1,4 +1,3 @@
-import torchvision.transforms.v2 as transforms
 from torchvision.datasets import MNIST
 from torch.utils.data import DataLoader
 from mnistkit.transforms import basic_transform
